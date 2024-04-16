@@ -17,7 +17,7 @@ export default {
     increment() {
       this.count++
     },
-    delet(value){
+    delete(value){
       const index=this.items.indexOf(value[0])
       console.log(index,value)
       this.items.splice(index ,1)
@@ -63,7 +63,7 @@ export default {
 </li>
 {{ selection }}
 
-  <button @click="delet(selection)" >Delete </button>
+  <button @click="delete(selection)" >Delete </button>
   <button @click="add(selection)">Add </button>
 </div>
 </template>
