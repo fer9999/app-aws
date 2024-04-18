@@ -27,7 +27,7 @@ export default {
 
     },
     async get_list(){
-      const response =  await fetch("http://localhost:5000/read",{
+      const response =  await fetch("http://${import.meta.env.VITE_IP}:5000/read",{
           method: "get",
           mode: "cors",
           cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
