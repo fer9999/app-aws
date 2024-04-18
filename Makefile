@@ -18,13 +18,13 @@ buildback:
 
 buildfront:
 	(cd frontend; \ 
-	npm install )
+	. ~/.nvm/nvm.sh && npm install )
 
 installdep:
 	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 	(source ~/.bashrc && \
-	bash -c nvm install --lts )
-	
+	. ~/.nvm/nvm.sh &&  nvm install --lts )
+
 
 down: 
 	pkill -f "python app.py"
